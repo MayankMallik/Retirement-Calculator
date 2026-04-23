@@ -1,0 +1,67 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retirement Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator-card">
+        <h2>Retirement Calculator</h2>
+        
+        <div class="inputs-grid">
+            <div class="input-group">
+                <label for="presentAge">Present Age (In Years) <span class="asterisk">*</span></label>
+                <input type="text" id="presentAge" inputmode="numeric" placeholder="e.g. 25">
+            </div>
+            <div class="input-group">
+                <label for="retireAge">Retirement Age <span class="asterisk">*</span></label>
+                <input type="text" id="retireAge" inputmode="numeric" placeholder="e.g. 60">
+            </div>
+            <div class="input-group">
+                <label for="lifeExpectancy">Life Expectancy <span class="asterisk">*</span></label>
+                <input type="text" id="lifeExpectancy" inputmode="numeric" placeholder="e.g. 85">
+            </div>
+            <div class="input-group">
+                <label for="monthlyExpenses">Current Monthly Expenses <span class="asterisk">*</span></label>
+                <input type="text" id="monthlyExpenses" inputmode="numeric" placeholder="e.g. 50,000">
+            </div>
+            <div class="input-group">
+                <label for="inflationRate">Expected Inflation Rate (% p.a.) <span class="asterisk">*</span></label>
+                <input type="text" id="inflationRate" inputmode="numeric" placeholder="e.g. 6">
+            </div>
+            <div class="input-group">
+                <label for="currentInvestment">Present Investment For Retirement</label>
+                <input type="text" id="currentInvestment" inputmode="numeric" placeholder="e.g. 5,00,000">
+            </div>
+            <div class="input-group">
+                <label for="preReturn">Pre-Retirement Investment Return (% p.a.) <span class="asterisk">*</span></label>
+                <input type="text" id="preReturn" inputmode="numeric" placeholder="e.g. 12">
+            </div>
+            <div class="input-group">
+                <label for="postReturn">Post-Retirement Investment Return (% p.a.) <span class="asterisk">*</span></label>
+                <input type="text" id="postReturn" inputmode="numeric" placeholder="e.g. 8">
+            </div>
+        </div>
+
+        <button onclick="calculateRetirement()"><b>Calculate</b></button>
+
+        <div class="results" id="results" style="display: none;">
+            <div class="result-item">
+                <span>Monthly Expenditure At The Time Of Retirement:</span>
+                <span id="resMonthlyExp">₹0</span>
+            </div>
+            <div class="result-item">
+                <span>Total Amount Required At The Time Of Retirement:</span>
+                <span id="resCorpus">₹0</span>
+            </div>
+            <div class="result-item total">
+                <span>Monthly SIP Required To Achieve Retirement Corpus:</span>
+                <span id="resSIP">₹0</span>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
